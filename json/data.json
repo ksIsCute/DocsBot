@@ -1,0 +1,77 @@
+{
+  "visits": 718,
+  "version": 1.0,
+  "Docs": {
+    "server": {
+      "count": 4,
+      "servers": [
+        "The test",
+        "Mecha",
+        "Testingserver",
+        "Repeatafterme"
+      ]
+    },
+    "users": 113
+  },
+  "The test": {
+    "channels": [
+      "System Logs - 01FZ90R5WFFZNMWJBG7D5KVV7X",
+      "Bot Use - 01FZ91THCX6DT9F9HT9DRWZ7RD",
+      "Moderation Logs - 01FZ9203YN2ZYTQDGDAWQ8KHZC",
+      "General - 01FZ9248J8GEZJYDJDPVQ2642A",
+      "Status - 01G05GKV3J265A5S0TK1AWVG9A",
+      "Spam - 01G18CVJX79BXR1CJ0EW608RQK",
+      "NSFW - 01G1ZMM9J0HNKGBQA42DA9BC9R"
+    ],
+    "id": "01FZ90R5WF125Y07FW2911FHNW",
+    "sendable": {
+      "message": "howdy",
+      "sentmessage": "howdy",
+      "channel": "01FZ9248J8GEZJYDJDPVQ2642A"
+    }
+  },
+  "Mecha": {
+    "channels": [
+      "rules - 01FZBBH8272973DC0VQ38YW6Q7",
+      "announcements - 01FZBBHB617YRSY0GECFQQ4FT4",
+      "Updates - 01FZBBHNBWMH46TWN0HVJT1W5F",
+      "Events - 01FZBBHR6Q4SY3HVY3B94F3SV4",
+      "Status - 01FZBBJJM9R6VYE0M5WJDGKMPT",
+      "chat - 01FZBBKW7F3PN3CEA5TDS6HY7D",
+      "memes - 01FZBBM0AGKMMNDW7W31TCE39Q",
+      "Bot Commands - 01FZBBN04AVCEDHJRJW4WDBDHD",
+      "Dev Log - 01FZCMVC3SZF9YJ64T3EZGC84N",
+      "music - 01FZRWP3JBZ09EPK2Y80DQJSJ1",
+      "counting - 01G13HTVA1QTQ3WPYTQ28AYAM8",
+      "Suggestions - 01G1NSSM1A6Z93F04K2DP7P3GF"
+    ],
+    "id": "01FZB38TYPX73VSWFMMJTZE8C5",
+    "sendable": {
+      "message": "hi peeple",
+      "sentmessage": "hi peeple",
+      "channel": "01FZBBM0AGKMMNDW7W31TCE39Q"
+    }
+  },
+  "Testingserver": {
+    "channels": [
+      "general - 01FZHPXYPPKE856AYAJ6AB1SFJ"
+    ],
+    "id": "01FZHPXYPP0KZ4AGTQTA08CPPJ",
+    "sendable": {
+      "message": "None Yet",
+      "sentmessage": "None Yet",
+      "channel": "Channel ID Not Yet"
+    }
+  },
+  "Repeatafterme": {
+    "channels": [
+      "general - 01G214R5HRKX84WMZ9DCKFF4X2"
+    ],
+    "id": "01G214R5HRG1Q21PYMGGXPQDVY",
+    "sendable": {
+      "message": "None Yet",
+      "sentmessage": "None Yet",
+      "channel": "Channel ID Not Yet"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Embed!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css">
+    
+    <meta property="og:title" content="{{ embtitle }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ emblink }}" />
+    <meta property="og:description" content="{{ embdesc }}" />
+    <meta name="theme-color" content="#{{ embcolor }}">
+    <meta property="og:image" content="{{ embimage }}">
+  </head>
+  <style>
+  element.style {
+    border-inline-start-color: #4d4d4d;
+    width: 457px;
+  }
+  .emb {
+    font-weight: 300;
+    justify-content:center; 
+    align-items:center;
+    word-break: break-word;
+    font-family: "Lexend Deca";
+    gap: 6px;
+    display: flex;
+    flex-direction: row;
+    border-inline-start-width: 4px;
+    border-inline-start-style: solid;
+    padding: 12px;
+    width: fit-content;
+    background: #363636;
+    border-radius: 6px;
+    margin: 0.2em 0;
+    font-size: 1.1em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  p {
+    font-family: "Lexend Deca";
+    color: #F6F6F6;
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    white-space: pre-wrap;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  a {
+    font-family: "Lexend Deca";
+    color: #FD6671;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 1.1em;
+    text-decoration:none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  img {
+    cursor: pointer;
+    object-fit: contain;
+    border-radius: 6px;
+    width: 107.344px;
+    height: 143.125px;
+    text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    float: right;
+    justify-content:right;
+    z-index: 1;
+  }
+  </style>
+  <body>
+    <h1>Embed created!</h1>
+    <h2>Heres A Preview:</h2>
+    <div style="align-items:center;justify-content:center">
+      <div style="justify-content:center; align-items:center;border-inline-start-color: #{{ embcolor }}; width: 457px;" class=emb>
+        <img src="{{ embimage }}" alt="Chosen image" style="width: 107.344px;height: 143.125px;">
+        <a href="{{ emblink }}">{{ embtitle }}</a>
+        <p>{{ embdesc }}</p>
+      </div>
+    </div>
+  </body>
+</html>

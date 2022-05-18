@@ -1,0 +1,38 @@
+<html lang="{{ lang }}">
+  
+  <head>
+    <title>Send A Message!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css">
+  </head>
+  
+  <body>
+    
+    <header>
+      <h1>Create an embed!</h1>
+    </header>
+    <img width=300px height=300px src="" alt="chosen image" id=output>
+    <p>When an image is uploaded, it will show up here!</p>
+    <form method="post" enctype="multipart/form-data">
+      <input id=textstyle type="text" placeholder="Embed title" name="embedtitle">
+      <input id=textstyle type="text" placeholder="Embed description" name="embeddesc">
+      <input id=textstyle type="text" placeholder="Hex code color of embed" name="embedcolor">
+      <input id=textstyle type="text" placeholder="Title link" name="embedlink">
+      <input type="file" name="embedimg" id="inputstyle" onchange="load(event)">
+      <p>Embedlink is unneeded but accepted.</p>
+      <input id=inputstyle type="submit">
+    </form>
+    <script>
+      var load = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
+    <footer class="footertext">
+      <hr>
+      <p style="font-weight:100;color: #BCCCDC;">Created by css</p>
+    </footer>
+  </body>
+</html>

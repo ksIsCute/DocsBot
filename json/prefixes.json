@@ -1,0 +1,30 @@
+{
+  "01FZ90R5WF125Y07FW2911FHNW": {
+    "name": "The Test",
+    "prefixes": [
+      "d!",
+      "docs!"
+    ]
+  },
+  "01FZB38TYPX73VSWFMMJTZE8C5": {
+    "name": "Mecha",
+    "prefixes": [
+      "d!",
+      "docs!"
+    ]
+  },
+  "01FZHPXYPP0KZ4AGTQTA08CPPJ": {
+    "name": "testingserver",
+    "prefixes": [
+      "d!",
+      "docs!"
+    ]
+  },
+  "01G214R5HRG1Q21PYMGGXPQDVY": {
+    "name": "RepeatAfterMe",
+    "prefixes": [
+      "d!",
+      "docs!"
+    ]
+  }
+}

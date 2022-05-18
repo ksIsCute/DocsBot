@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send A Message!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css">
+  </head>
+  <body>
+    <div class="banner" id="banner">
+      <p>Please check out the library used to create the bot powering this website!</p>
+      <img src="static/images/close.png" width=50px height=50px alt="Close banner" style="z-index:1;position: absolute;top:0;right:0;padding:21.5px;" onclick="bannerclose()">
+    </div>
+    <header>
+      <h1>Send a Message!</h1>
+    </header>
+    <p>Send a message now to our communities of <i>{{ usercount }}</i> users inside <i>{{ servercount }}</i> servers!</p>
+    <div>
+      <h3>Servers That Accept Messages:</h3>
+      {% autoescape false %}
+          <p><strong style="font-weight:500;">{{ servers|join('<br>'|safe) }}</strong></p>
+      {% endautoescape %}
+    </div>
+    <form method="post">
+      <input type="text" placeholder="Server name here!" name="server" id="textstyle"></input>
+      <input type="submit" id="inputstyle" value="Submit">
+    </form>
+    <h2 style="font-weight:500">Want YOUR server listed here?</h2>
+    <div>
+      <button onclick="redirect('https://app.revolt.chat/bot/01FZJS79PT44V3H9H7NTGGT7DR')">Add the bot!</button>
+      <button onclick="redirect('https://flaskmsgsendthing.ksiscute.repl.co/embed')">Create a custom embed!</button>
+      <button onclick="redirect('https://flaskmsgsendthing.ksiscute.repl.co/dashboard')">View dashboard (wip)</button>
+    </div>
+    <br>
+    <h3 style="font-weight:700">PLEASE READ BEFORE ADDING OUR BOT!</h3>
+    <img src="static/images/arrow-down.png" alt="down arrow" id="arrow" class="arrow" width=50px height=50px style="z-index:1">
+    <p>By adding the bot, you agree to the bot sending messages to any text channel inside of your server. Aswell as your server being publicly listed on our "Servers That Accept Messages" list.</p>
+    <script>
+      function redirect(url) {
+        console.log("Redirecting into a new page.")
+        window.open(url)
+      }
+    </script>
+    <footer class="footertext">
+      <hr>
+      <p style="font-weight:100;color: #BCCCDC;">Created by</p>
+      <pre style="font-family:monospace; color:#BCCCDC; overflow:hidden">
+        CCCCCCCCCCCCC   SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS 
+     CCC::::::::::::C SS:::::::::::::::S SS:::::::::::::::S
+   CC:::::::::::::::CS:::::SSSSSS::::::SS:::::SSSSSS::::::S
+  C:::::CCCCCCCC::::CS:::::S     SSSSSSSS:::::S     SSSSSSS
+ C:::::C       CCCCCCS:::::S            S:::::S            
+C:::::C              S:::::S            S:::::S            
+C:::::C               S::::SSSS          S::::SSSS         
+C:::::C                SS::::::SSSSS      SS::::::SSSSS    
+C:::::C                  SSS::::::::SS      SSS::::::::SS  
+C:::::C                     SSSSSS::::S        SSSSSS::::S 
+C:::::C                          S:::::S            S:::::S
+ C:::::C       CCCCCC            S:::::S            S:::::S
+  C:::::CCCCCCCC::::CSSSSSSS     S:::::SSSSSSSS     S:::::S
+   CC:::::::::::::::CS::::::SSSSSS:::::SS::::::SSSSSS:::::S
+     CCC::::::::::::CS:::::::::::::::SS S:::::::::::::::SS 
+        CCCCCCCCCCCCC SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS   
+      </pre>
+      <p style="font-weight:100;color: #BCCCDC;">You are visitor #{{ totalvisits }}</p>
+      <p style="font-weight:100;color: #BCCCDC;">Online for {{ uptime }}</p>
+    </footer>
+  </body>
+  <script src="/static/scripts/mobilecheck.js">
+    if (window.mobileCheck() === true) {
+      console.log("user is on a mobile device.")
+    } else {
+      console.log("user is not on a mobile device.")
+    }
+  </script>
+  <!-- push notifications test !-->
+  <script src="/static/scripts/notify.js">
+    notify("Send A Message", "Your Message is Sending!", "https://flaskmsgsendthing.ksiscute.repl.co/static/logob.png")
+  </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script>
+    function getver() {
+      $.getJSON("https://flaskmsgsendthing.ksiscute.repl.co/asjwahye7823yh38hf7348hfsdyqwys8chSAYQWYH", 
+        function(result) {
+          console.log(result)
+          if ("{{ checkver }}" != result) {
+            alert("You're on an outdated version of the website! Please refresh your current tab to make sure you're up to date!");
+          } else {
+            console.log("Up to date");
+          };
+        });
+    };
+  </script>
+  <script src="static/scripts/banner.js"></script>
+</html>

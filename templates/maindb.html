@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs Mainframe!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>{{ sname }}'s Dashboard</h1>
+    </header>
+    <h2>Welcome, {{ username }}.</h2>
+    {% autoescape false %}
+      <p>{{ notice }}</p>
+    {% endautoescape %}
+    <div>
+      <h3>Current Prefixes:</h3>
+      {% autoescape false %}
+        <p><strong style="font-weight:500;"> {{ parray|join('<br>'|safe) }} </strong></p>
+      {% endautoescape %}
+    </div>
+    <form method="post">
+      <input type="text" id=textstyle placeholder="Add a server prefix!" name="addprefix"></input>
+      <input type="text" id=textstyle placeholder="Remove a prefix from the list above" name="delprefix"></input>
+      <input type="submit" id=inputstyle>
+    </form>
+    <p>The dashboard is a work in progress, please remain with us as we continue our journey towards a better experience.</p>
+
+    
+    <footer class="footertext">
+      <hr>
+      <p style="font-weight:100;color: #BCCCDC;">Created by css</p>
+    </footer>
+  </body>
+</html>

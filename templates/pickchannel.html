@@ -1,0 +1,42 @@
+<html lang="{{ lang }}">
+  
+  <head>
+    <title>Send A Message!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css">
+  </head>
+  
+  <body>
+    
+    <header>
+      <h1>Pick-a-Channel!</h1>
+    </header>
+    <p>In order to send a message, we require you to pick a channel. Please pick a channel based on the name and copy the id beside the corresponding channel.</p>
+    <div>
+      <h3>Channel List:</h3>
+      {% autoescape false %}
+      <div class="dropdown">
+        <button class="dropbtn">Channel List (Dropdown Menu)</button>
+        <div class="dropdown-content">
+          <p>{{ channels|join('<br><br>'|safe) }}</p>
+        </div>
+      </div>
+      {% endautoescape %}
+    </div>
+    <br></br>
+    <form method="post">
+      <input type="text" name="channelid" placeholder="Paste the channel ID here!" id="textstyle"></input>
+      <input type="text" name="message" placeholder="Send a nice message!" id="textstyle"></input>
+      <input type="submit" id="inputstyle" value="Submit">
+    </form>
+    <script src="/static/scripts/notify.js"></script>
+    <h1>{{ error }}</h1>
+    <footer class="footertext">
+      <hr>
+      <p style="font-weight:100;color: #BCCCDC;">Created by css</p>
+    </footer>
+    
+  </body>
+</html>
