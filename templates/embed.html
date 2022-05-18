@@ -94,5 +94,20 @@
         <p>{{ embdesc }}</p>
       </div>
     </div>
+    <br>
+    <button onclick="copytext()">Copy embed url!</button>
+    <br>
+    <p id="notice"></p>
+    <script>
+      function copytext() {
+        navigator.clipboard.writeText(window.location.href);
+        document.getElementById("notice").innerText = "Copied cooresponding url for your embed!";
+      }
+    </script>
+    <br></br>
+    <footer class="footertext">
+      <hr>
+      <p style="font-weight:100;color: #BCCCDC;">Created by css</p>
+    </footer>
   </body>
 </html>

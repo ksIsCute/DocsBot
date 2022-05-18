@@ -173,29 +173,36 @@ def embedmaker():
     link = request.args.get("link")
     image = request.args.get("image")
     if image in ['', 'none']:
-      image = "no image"
+      setimage = "/static/images/noimage.png"
     else:
-      image = "https://flaskmsgsendthing.ksiscute.repl.co/static/embimg/embedimg.png"
-    if color == '':
+      setimage = f"/static/embimg/{''.join(request.access_route[0].split('.')[1:])}.png"
+    if not color:
       color = "FFFFFF"
-    return render_template("embed.html", embtitle=title, embdesc=description, embcolor=color.replace("#", ""), emblink=link, embimage=image)
+    return render_template("embed.html", embtitle=title, embdesc=description, embcolor=color.replace("#", ""), emblink=link, embimage=setimage)
   if request.method == "POST":
     title = request.form.get("embedtitle")
     desc = request.form.get("embeddesc")
     color = request.form.get("embedcolor")
     link = request.form.get("titlelink")
     givenimage = flask.request.files.get('embedimg', '')
-    givenimage.save("static/embimg/embedimg.png")
+    givenimage.save(f"static/embimg/{''.join(request.access_route[0].split('.')[1:])}.png")
     image = ""
     if not givenimage:
       image = "none"
     else:
-      image = "https://flaskmsgsendthing.ksiscute.repl.co"
+      image = f"/static/embimg/{''.join(request.access_route[0].split('.')[1:])}.png"
     if not link:
       link = "https://flaskmsgsendthing.ksiscute.repl.co"
-    return redirect(f"https://flaskmsgsendthing.ksiscute.repl.co/embed?title={title}&description={desc}&color={color}&link={link}&image={image}")
+    return redirect(f"https://flaskmsgsendthing.ksiscute.repl.co/embed?title='{title}'&description='{desc}'&color='{color}'&link='{link}'&image='{image}'")
   return render_template("makeembed.html")
-  
+
+@app.route("/ccp")
+def ccp():
+  if request.args:
+    lang = request.args.get("lang")
+  else:
+    lang = "en"
+  return render_template("ccp.html", lang=lang)
 
 def startup():
   app.run("0.0.0.0", port=5000, debug=False) # change if needed

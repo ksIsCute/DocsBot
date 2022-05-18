@@ -216,5 +216,18 @@ async def createacc(ctx, password:str, email:str):
 async def uptime(ctx):
   await ctx.reply(f"`{str(datetime.timedelta(seconds=int(round(time.time() - onlinesince))))}`")
 
+@bot.command()
+async def userinfo(ctx, user: voltage.User):
+  print(user.created_at)
+  print(time.time())
+  print(datetime.datetime.now())
+  print(datetime.timedelta(seconds=user.created_at - time.time()))
+
+@bot.command()
+async def typing(ctx):
+  await bot.user.start_typing
+  await asyncio.sleep(2)
+  await bot.user.end_typing
+
 run()
 bot.run(os.environ['token'])
